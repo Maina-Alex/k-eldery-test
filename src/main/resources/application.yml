@@ -1,0 +1,36 @@
+spring:
+
+  application:
+    name: elderly-service
+
+  datasource:
+    username: replace
+    url: replace
+    password: replace
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: replace
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registryFetchIntervalSeconds: 10
+    prefer-same-zone-eureka: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    enabled: on
+
+
+
+logging:
+  file:
+    name: ./logs/${spring.application.name}.log
+
